@@ -5,4 +5,4 @@ var t,e=arguments[3];!function(e,i){"function"==typeof t&&t.amd?t([],function(){
 },{}],"GyVV":[function(require,module,exports) {
 "use strict";var e=require("notiflix");function t(e,t){Math.random()}const n=document.querySelector(".form");function o(e){e.preventDefault();const{elements:{delay:t,step:n,amount:o}}=e.currentTarget;i(Number(t.value),Number(n.value),Number(o.value)),e.currentTarget.reset()}function i(n,o,i){for(let r=1;r<=i;r+=1)t(r,n).then(({position:t,delay:n})=>{setTimeout(()=>{e.Notify.success(`✅ Fulfilled promise ${t} in ${n}ms`)},n)}).catch(({position:t,delay:n})=>{setTimeout(()=>{e.Notify.failure(`❌ Rejected promise ${t} in ${n}ms`)},n)}),n+=o}function t(e,t){const n=Math.random()>.3;return new Promise((o,i)=>{n?o({position:e,delay:t}):i({position:e,delay:t})})}n.addEventListener("submit",o);
 },{"notiflix":"ja4j"}]},{},["GyVV"], null)
-//# sourceMappingURL=/parcel-project-template/03-promises.393b282f.js.map
+//# sourceMappingURL=/goit-js-hw-09/03-promises.393b282f.js.map
